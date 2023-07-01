@@ -6,8 +6,10 @@ html {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: var(--font-primary);
+  min-height: 100vh;
 }
 
 body {
   background-color: var(--background-primary);
+  height: 100%;
 }

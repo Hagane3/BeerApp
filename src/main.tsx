@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./pages/Root.tsx";
+import NotFoundPage from "./pages/NotFoundPage.tsx";
 
 import "./index.scss";
 
@@ -9,7 +10,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    errorElement: <div>404</div>,
+    errorElement: <NotFoundPage />,
     children: [
       {
         path: "/",
