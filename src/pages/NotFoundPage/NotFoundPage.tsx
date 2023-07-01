@@ -1,6 +1,5 @@
-import React from "react";
 import classes from "./NotFoundPage.module.scss";
-import notFoundImg from "../assets/images/notFoundImg.webp";
+import notFoundImg from "../../assets/images/notFoundImg.webp";
 import { Link } from "react-router-dom";
 
 const NotFoundPage = () => {
