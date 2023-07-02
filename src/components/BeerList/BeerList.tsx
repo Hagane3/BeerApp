@@ -28,11 +28,13 @@ const BeerList = () => {
           return <BeerItem key={beer.id} beer={beer} />;
         })
       )}
-      <Pagination
-        changePageHandler={setPage}
-        actualPage={page}
-        hasMoreData={hasMoreData}
-      />
+      <div className={classes.paginationWrapper}>
+        <Pagination
+          changePageHandler={setPage}
+          actualPage={page}
+          hasMoreData={hasMoreData}
+        />
+      </div>
     </div>
   );
 };

@@ -23,11 +23,19 @@
 @include mixins.md {
   .root {
     grid-template-columns: repeat(2, 1fr);
+
+    .paginationWrapper {
+      grid-column: 1 / 3;
+    }
   }
 }
 
 @include mixins.xl {
   .root {
     grid-template-columns: repeat(3, 1fr);
+
+    .paginationWrapper {
+      grid-column: 1 / 4;
+    }
   }
 }
