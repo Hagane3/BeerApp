@@ -12,12 +12,18 @@ const BeerList = () => {
   const { data, loading, error } = useFetch(
     `https://api.punkapi.com/v2/beers?per_page=${PER_PAGE}&page=${page}`
   );
-  console.log(data);
   const { hasMoreData } = useMoreData({ data, perPage: PER_PAGE });
 
   return (
     <div className={classes.root}>
       <h2>Try our beer app today!</h2>
+      <div className={classes.paginationWrapper}>
+        <Pagination
+          changePageHandler={setPage}
+          actualPage={page}
+          hasMoreData={hasMoreData}
+        />
+      </div>
       {error && <p className={classes.error}>{error.message}</p>}
       {loading && !error ? (
         <div className={classes.wrapper}>

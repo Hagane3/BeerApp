@@ -14,7 +14,6 @@ interface Props {
 
 const BeerItem = ({ beer }: Props) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
-  // console.log(beer);
   return (
     <div className={classes.root}>
       <h3>{beer.name}</h3>
