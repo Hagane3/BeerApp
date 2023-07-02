@@ -25,18 +25,28 @@ const Navbar = () => {
       <h1>
         <Link to="/">BeerApp</Link>
       </h1>
-      <button className={classes.menuOpenIcon} onClick={toggleMobileMenu}>
+      <button
+        className={classes.menuOpenIcon}
+        onClick={toggleMobileMenu}
+        data-testid="menu open"
+      >
         <img src={menuIcon} alt="menu icon" />
       </button>
       <div
         className={`${classes.menu} ${isMobileMenuOpen ? classes.active : ""}`}
       >
-        <button className={classes.menuCloseIcon} onClick={toggleMobileMenu}>
+        <button
+          className={classes.menuCloseIcon}
+          onClick={toggleMobileMenu}
+          data-testid="menu close"
+        >
           <img src={closeMenuIcon} alt="menu icon" />
         </button>
         <ul>
           <li>
-            <Link to="/about">About us</Link>
+            <Link to="/about" data-testid="mobile menu">
+              About us
+            </Link>
           </li>
           <GetRandomBeer />
         </ul>
