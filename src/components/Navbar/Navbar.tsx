@@ -29,7 +29,9 @@ const Navbar = () => {
           <img src={closeMenuIcon} alt="menu icon" />
         </button>
         <ul>
-          <li>About us</li>
+          <li>
+            <Link to="/about">About us</Link>
+          </li>
           <GetRandomBeer />
         </ul>
       </div>

@@ -6,6 +6,7 @@ import RootLayout from "./pages/Root.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
 import Homepage from "./pages/Homepage.tsx";
 import SingleItemPage from "./pages/SingleItemPage.tsx";
+import AboutPage from "./pages/AboutPage.tsx";
 
 import "./index.scss";
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         element: <SingleItemPage />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
       },
     ],
   },
