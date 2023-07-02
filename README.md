@@ -42,6 +42,14 @@ Start the server
   npm run start
 ```
 
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+
 ## API Reference
 
 #### Get all items
