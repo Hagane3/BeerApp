@@ -3,6 +3,7 @@ import classes from "./Navbar.module.scss";
 import menuIcon from "../../assets/icons/menuIcon.svg";
 import closeMenuIcon from "../../assets/icons/closeMenuIcon.svg";
 import logo from "../../assets/icons/logo.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,7 +15,9 @@ const Navbar = () => {
   return (
     <nav className={classes.root}>
       <img className={classes.logo} src={logo} alt="beer logo" />
-      <h1>BeerApp</h1>
+      <h1>
+        <Link to="/">BeerApp</Link>
+      </h1>
       <button className={classes.menuOpenIcon} onClick={toggleMobileMenu}>
         <img src={menuIcon} alt="menu icon" />
       </button>
