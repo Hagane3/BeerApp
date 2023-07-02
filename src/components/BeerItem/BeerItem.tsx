@@ -14,6 +14,11 @@ interface Props {
 
 const BeerItem = ({ beer }: Props) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
   return (
     <div className={classes.root}>
       <h3>{beer.name}</h3>
@@ -22,7 +27,7 @@ const BeerItem = ({ beer }: Props) => {
         src={beer.image_url}
         className={isImageLoaded ? classes.active : classes.inActive}
         alt="beer image"
-        onLoad={() => setIsImageLoaded(true)}
+        onLoad={handleImageLoad}
       />
       <p>{beer.tagline}</p>
       <Link to={`details/${beer.id}`}>Check details</Link>
