@@ -8,6 +8,10 @@ Application showing different beers downloaded from Rest Api https://punkapi.com
 
 https://hagane-beer-app.netlify.app
 
+## Illustrative design
+
+https://www.figma.com/file/zwZ0MgvAJY3e7GWvfL2qxO/Beer-App?type=design&node-id=0%3A1&mode=design&t=l2BVJPg9RMendhfs-1
+
 ## Tech Stack
 
 **Client:** React, React-Router-Dom, Axios, SASS
