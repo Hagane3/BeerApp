@@ -1,0 +1,22 @@
+@use "../../styles/mixins";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0;
+
+  h2 {
+    margin-bottom: 2em;
+    font-size: 1.3rem;
+  }
+}
+
+@include mixins.lg {
+  .root {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
