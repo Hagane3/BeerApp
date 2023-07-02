@@ -37,7 +37,7 @@ const SingleItem = () => {
       </div>
     );
 
-  if (error) return <p>Something went wrong...</p>;
+  if (error) return <p className={classes.error}>Something went wrong...</p>;
 
   return (
     <section className={classes.root}>
