@@ -3,6 +3,7 @@ import classes from "./Navbar.module.scss";
 import menuIcon from "../../assets/icons/menuIcon.svg";
 import closeMenuIcon from "../../assets/icons/closeMenuIcon.svg";
 import logo from "../../assets/icons/logo.svg";
+import GetRandomBeer from "../GetRandomBeer/GetRandomBeer";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -29,7 +30,7 @@ const Navbar = () => {
         </button>
         <ul>
           <li>About us</li>
-          <li>Get Random Beer</li>
+          <GetRandomBeer />
         </ul>
       </div>
     </nav>
