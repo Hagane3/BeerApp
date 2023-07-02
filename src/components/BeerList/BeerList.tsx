@@ -17,6 +17,7 @@ const BeerList = () => {
 
   return (
     <div className={classes.root}>
+      <h2>Try our beer app today!</h2>
       {error && <p className={classes.error}>{error.message}</p>}
       {loading && !error ? (
         <div className={classes.wrapper}>

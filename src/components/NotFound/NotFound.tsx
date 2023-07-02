@@ -1,8 +1,8 @@
-import classes from "./NotFoundPage.module.scss";
-import notFoundImg from "../../assets/images/notFoundImg.webp";
 import { Link } from "react-router-dom";
+import notFoundImg from "../../assets/images/notFoundImg.webp";
+import classes from "./NotFound.module.scss";
 
-const NotFoundPage = () => {
+const NotFound = () => {
   return (
     <section className={classes.root}>
       <h1>Ooops!</h1>
@@ -14,4 +14,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default NotFound;
