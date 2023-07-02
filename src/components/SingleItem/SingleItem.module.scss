@@ -1,0 +1,157 @@
+@use "../../styles/mixins";
+
+.wrapper {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 4em auto;
+  max-width: 60em;
+
+  h3 {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-top: 2em;
+  }
+
+  .basicInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+
+    h2 {
+      font-size: 1.8em;
+      font-weight: 600;
+      text-align: center;
+      width: 90%;
+    }
+
+    h4 {
+      font-size: 1em;
+      font-weight: lig;
+    }
+
+    img {
+      margin: 2em 0;
+      height: 20em;
+    }
+
+    .inActive {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    p {
+      text-align: justify;
+      width: 80%;
+    }
+  }
+
+  .details {
+    width: 80%;
+    text-align: center;
+
+    .detailsScores {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1em;
+      margin-top: 1em;
+
+      .score {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+        margin: 0.5em 0;
+        padding: 0.7em 1.2em;
+        border-radius: 0.5em;
+        background-color: #f5f5f5;
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+
+        h4 {
+          font-size: 1em;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 1em;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .ingredients {
+    width: 80%;
+    text-align: center;
+
+    .ingredientsList {
+      display: grid;
+      gap: 3em;
+      margin-top: 1em;
+
+      .ingredient {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        margin: 0.5em 0;
+        padding: 0.7em 1.2em;
+        border-radius: 0.5em;
+        background-color: #f5f5f5;
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+
+        p {
+          font-style: italic;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+
+          li {
+            font-style: italic;
+          }
+        }
+
+        h4 {
+          font-size: 1em;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 1em;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@include mixins.lg {
+  .root {
+    .ingredientsList {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@use "../../styles/mixins";
+
+.root {
+  background-color: var(--background-secondary);
+  width: 80%;
+  max-width: 22em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em 0;
+  gap: 1em;
+  border-radius: 0.5em;
+  box-shadow: 2px 4px 6px -3px rgba(0, 0, 0, 0.25);
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 80%;
+    text-align: center;
+  }
+
+  img {
+    padding: 1em 0;
+    border-top: 1px solid var(--border-primary);
+    border-bottom: 1px solid var(--border-primary);
+    height: 15em;
+  }
+
+  p {
+    font-size: 1.1rem;
+    width: 80%;
+    text-align: center;
+  }
+
+  a {
+    border: 1px solid var(--border-primary);
+    padding: 0.6em 1.1em;
+    border-radius: 10px;
+    background-color: var(--background-secondary);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--branding-primary);
+      color: var(--background-secondary);
+    }
+  }
+
+  .inActive {
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+}
+
+@include mixins.md {
+  .root {
+    width: 22em;
+  }
+}

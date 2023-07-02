@@ -34,7 +34,7 @@
   .menu {
     border-left: 2px solid var(--border-primary);
     background-color: var(--background-secondary);
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 70%;

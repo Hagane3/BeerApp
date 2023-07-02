@@ -1,20 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import classes from "./Navbar.module.scss";
 import menuIcon from "../../assets/icons/menuIcon.svg";
 import closeMenuIcon from "../../assets/icons/closeMenuIcon.svg";
 import logo from "../../assets/icons/logo.svg";
+import GetRandomBeer from "../GetRandomBeer/GetRandomBeer";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
   };
 
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
   return (
     <nav className={classes.root}>
       <img className={classes.logo} src={logo} alt="beer logo" />
-      <h1>BeerApp</h1>
+      <h1>
+        <Link to="/">BeerApp</Link>
+      </h1>
       <button className={classes.menuOpenIcon} onClick={toggleMobileMenu}>
         <img src={menuIcon} alt="menu icon" />
       </button>
@@ -25,8 +35,10 @@ const Navbar = () => {
           <img src={closeMenuIcon} alt="menu icon" />
         </button>
         <ul>
-          <li>About us</li>
-          <li>Get Random Beer</li>
+          <li>
+            <Link to="/about">About us</Link>
+          </li>
+          <GetRandomBeer />
         </ul>
       </div>
     </nav>

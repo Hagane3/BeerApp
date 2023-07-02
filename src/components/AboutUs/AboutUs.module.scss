@@ -1,0 +1,91 @@
+@use "../../styles/mixins";
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4em 0;
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80em;
+    width: 80%;
+
+    .container {
+      width: 70%;
+      margin: 0 auto;
+      position: relative;
+      max-width: 30em;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0.1em;
+        left: -0.3em;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: var(--branding-primary);
+        transition: 0.2s ease-in-out;
+      }
+
+      &:hover {
+        &::before {
+          top: 0.3em;
+          left: -0.5em;
+        }
+      }
+    }
+
+    .description {
+      margin-top: 2em;
+      width: 90%;
+      text-align: justify;
+      display: grid;
+      gap: 1em;
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  a {
+    background-color: var(--branding-primary);
+    color: var(--font-secondary);
+    padding: 0.5em 1.5em;
+    border-radius: 0.5em;
+    margin-top: 2em;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@include mixins.lg {
+  .root {
+    .wrapper {
+      flex-direction: row;
+
+      margin-top: 10em;
+      gap: 2em;
+
+      .description {
+        margin-top: 0;
+
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    a {
+      margin-top: 8em;
+      font-size: 1.2em;
+    }
+  }
+}
