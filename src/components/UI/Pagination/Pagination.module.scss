@@ -1,0 +1,27 @@
+.root {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  & > * {
+    border: 1px solid var(--border-primary);
+    background-color: var(--background-secondary);
+    height: 2.2em;
+    width: 2.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & > *:hover {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    opacity: 0.2;
+  }
+
+  .arrowLeft {
+    transform: rotate(180deg);
+  }
+}
