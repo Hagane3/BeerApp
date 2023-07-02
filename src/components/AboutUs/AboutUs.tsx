@@ -7,7 +7,7 @@ const AboutUs = () => {
     <section className={classes.root}>
       <div className={classes.wrapper}>
         <div className={classes.container}>
-          <img src={beerAbout} alt="two people drinking a beer" />
+          <img src={beerAbout} alt="friends enjoying beer" />
         </div>
         <div className={classes.description}>
           <p>

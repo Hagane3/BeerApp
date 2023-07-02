@@ -1,10 +1,11 @@
 import classes from "./GetRandomBeer.module.scss";
 import { useNavigate } from "react-router-dom";
+import { MAX_BEER_ID } from "../../constants";
 
 const GetRandomBeer = () => {
   const navigate = useNavigate();
   const getRandomBeer = () => {
-    const randomBeerId = Math.floor(Math.random() * 325) + 1;
+    const randomBeerId = Math.floor(Math.random() * MAX_BEER_ID) + 1;
     navigate(`/details/${randomBeerId}`);
   };
 
