@@ -1,17 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import classes from "./Navbar.module.scss";
 import menuIcon from "../../assets/icons/menuIcon.svg";
 import closeMenuIcon from "../../assets/icons/closeMenuIcon.svg";
 import logo from "../../assets/icons/logo.svg";
 import GetRandomBeer from "../GetRandomBeer/GetRandomBeer";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
   };
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
 
   return (
     <nav className={classes.root}>
