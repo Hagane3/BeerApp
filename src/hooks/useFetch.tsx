@@ -1,12 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-interface DataType {
-  [key: string]: string;
-}
-
 interface UseFetchType {
-  data: Array<DataType>;
+  data: Array<any>;
   loading: boolean;
   error: Error | null;
 }

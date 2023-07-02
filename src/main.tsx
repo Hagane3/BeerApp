@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./pages/Root.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
 import Homepage from "./pages/Homepage.tsx";
+import SingleItemPage from "./pages/SingleItemPage.tsx";
 
 import "./index.scss";
 
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <div>Single Beer</div>,
+        element: <SingleItemPage />,
       },
     ],
   },
